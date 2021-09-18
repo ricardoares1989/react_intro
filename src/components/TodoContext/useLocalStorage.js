@@ -3,7 +3,7 @@ import React from "react";
 export function useLocalStorage(itemName, initialValue) {
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
-  const [item, setItem] = React.useState(initialValue)
+  const [item, setItem] = React.useState(initialValue);
   React.useEffect(() => {
     setTimeout(() => {
       try {
@@ -30,11 +30,11 @@ export function useLocalStorage(itemName, initialValue) {
     } catch (error) {
       setError(error);
     }
-  }
+  };
   return {
     item,
     saveItem,
     loading,
     error,
-  }
+  };
 }
